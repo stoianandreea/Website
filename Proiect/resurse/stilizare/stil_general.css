@@ -1,0 +1,154 @@
+.deselectat{
+	display: none;	
+}
+/* proprietati generale */
+* {
+    margin: 0px;
+    padding: 0px;
+    text-indent: 0px;
+}
+body{
+	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3KTR57l7bibh0BnO05BfG5HRJz86GVp-te7pl6ASsLaInH60LQ&s");
+	font-size: 19px;
+	text-align: justify;
+	font-family: 'El Messiri';
+}
+main{
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 4%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+/* proprietati text */
+h1{
+	text-align: center;
+	font-size: 3rem;
+	text-decoration: underline;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+h2{
+	font-size: 2rem;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+p{ 
+	text-indent: 50px;
+}
+blockquote{
+	text-indent: 50px;
+}
+
+/* proprietati imagini */
+figure>img{
+	width: 100%;
+	height: auto;	
+}
+.ot{
+	width: 50%;
+	height: auto;
+}
+section figure:nth-of-type(even){
+	float: left;
+	padding-right: 2.5vw;	
+	}
+section figure:nth-of-type(odd){
+	float: right;
+	padding-left: 2.5vw;
+	}
+figcaption{
+	font-size: 0.9rem;
+	text-align: center;
+}
+/* class="imagine" reprezinta prima imagine a fiecarei pagini (are dimensiunile mai mari)*/
+.imagine {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+} 
+.add_padding {
+	padding-bottom: 40px;
+}
+/* butonul "inapoi la inceputul paginii curente" */
+.scroll-up {
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid black;
+    background: transparent;
+    display: block;
+    text-align: center;
+    line-height: 2.2rem;
+	text-decoration: none;
+	position: fixed;
+    right: 25px;
+    bottom: 25px;
+	color: black;
+}
+.scroll-up:hover{
+	color: #4169E1;
+	border: 1px solid #4169E1;
+}
+/* alte proprietati */
+ol li{
+	list-style-type: upper-roman;
+	font-weight: bold;
+	font-size: 22px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 30px;
+	text-indent: 10px;
+}
+ul li{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	list-style-type:circle;
+}
+ol.bookmark li{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+ol.bookmark a,ol a,ul a{
+	color: black;
+	font-weight:normal;
+}
+
+@media screen and (min-width:700px) and (max-width:1024px){	
+	p{
+		width:100%;
+		font-size: 22px;
+	}
+	.ot{
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+	main{
+		margin-left: 10%;
+		margin-right: 10%;
+		padding: 3%;
+	}
+}
+	
+@media screen and (max-width:700px){
+	p{
+		width:100%;
+		font-size: 21px;
+	}
+	.ot{
+		float: none;
+		width: 100%;
+		height: auto;
+	}	
+	main{
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 2%;
+	}
+	h1{
+		font-size: 2rem;
+		padding-top: 70px;
+	}
+}
+
+

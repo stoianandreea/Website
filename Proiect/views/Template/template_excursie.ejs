@@ -1,0 +1,45 @@
+<style>
+        th,td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        table{
+            border-collapse: collapse;
+            empty-cells: show;
+        }
+</style>
+
+<article id="art<%= excursie.id %>" class="template_excursie">
+	<h2>Nume excursie: <%= excursie.nume %></h2>
+	<h3>Categorie: <%= excursie.categorie %></h3>
+	<img style="float:right; width:180px; height: auto" src="<%= excursie.imagine %>" alt="[<%= excursie.nume %> nu are imagine]" />
+	<p id="nume"><%= excursie.nume %> </p>
+	<p id="descriere"><%= excursie.descriere %> </p>
+	<table id="tab">
+		<tr>
+			<td>Pret</td>
+			<td id="pret"><%= excursie.pret %> euro</td>
+		<tr>
+		<tr>
+			<td>Data inceperii</td>
+			<td><%= excursie.data %></td>
+		<tr>
+		<tr>
+			<td>Masa inclusa</td>
+			<% if(excursie.masa == 0) { %>
+				 <td id="masa">Nu</td>
+				<% } %>
+			<% if(excursie.masa == 1){ %>
+				 <td id="masa">Da</td>
+				<% } %>
+		<tr>
+		<tr>
+			<td>Tip transport</td>
+			<td id="transport"><%= excursie.transport %></td>
+		<tr>
+		<tr>
+			<td>Orase vizitate</td>
+			<td id="locatii"><%= excursie.locatii %></td>
+		<tr>
+	</table>
+</article>

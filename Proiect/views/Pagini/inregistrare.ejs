@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Stoian Andreea">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inregistrare user</title>
+	<link rel="stylesheet" href="resurse/stilizare/stil_general.css">
+	<link rel="stylesheet" href="resurse/stilizare/meniu.css">
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=El%20Messiri' rel='stylesheet'>
+</head>
+<body>
+
+	<header>
+		<%-include("../Template/header")%>
+	</header>
+	
+	<main>
+		<h1>Inregistrare user nou</h1>
+		
+		<% if(locals.error_message) { %>
+			<p> Username deja existent. Alege unul nou!</p> <br>
+		<% } %>
+		
+		<form class="date" method="post" enctype="multipart/form-data">
+			<p>
+				<label>Username: <input type="text" name="username" value=""></label>
+			</p>
+			<p>
+				<label>Parola: <input type="password" name="parola" value=""></label>
+			</p>
+			<p>            
+				<input type="submit" value="Submit">
+			</p>
+		</form>
+	
+	</main>
+
+	
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Stoian Andreea">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="resurse/stilizare/stil_general.css">
+	<link rel="stylesheet" href="resurse/stilizare/meniu.css">
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=El%20Messiri' rel='stylesheet'>
+</head>
+<body>
+
+	<header>
+		<%-include("../Template/header")%>
+	</header>
+	
+	<main>
+	
+		<div>
+			<h1>Inregistrare utilizator</h1>
+			
+			<% if(locals.error_message) { %>
+				<p> Username sau parola invalide. <br>
+					Incearca din nou! </p> <br>
+			<% } %>
+			
+			<p>Va rugam sa va logati: <br/>
+
+			<form id="login" method="post" >
+				<label>
+					Username: <input type="text" name="username" value="username">
+				</label>
+				<br>
+				<label>
+					Parola: <input type="password" name="parola" value="parola">
+				</label>
+			
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<br>
+		<p>Doriti sa va delogati? Apasati aici: <a href="/logout">Delogare</a></p>
+		<p>Nu aveti cont? Va puteti inregistra aici: <a href="/inregistrare">Inregistrare noua</a></p>
+
+
+	</main>
+	
+</body>
+</html>

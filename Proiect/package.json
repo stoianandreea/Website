@@ -1,0 +1,22 @@
+{
+  "name": "Proiect",
+  "version": "1.0.0",
+  "description": "Site despre un top de 5 orase din Europa ce merita vizitate, cu aplicatie de sortare si filtrare a unor excursii posibile",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "author": "Stoian Andreea",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

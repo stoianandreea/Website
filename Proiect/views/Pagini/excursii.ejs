@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Stoian Andreea">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Excursii</title>
+	<link rel="stylesheet" href="resurse/stilizare/stil_general.css">
+	<link rel="stylesheet" href="resurse/stilizare/meniu.css">
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=El%20Messiri' rel='stylesheet'>
+	<style>
+		p{
+			margin-left: -50px;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<%-include("../Template/header")%>
+	</header>
+	
+	<main>
+		<a href="#" class="scroll-up">^</a>
+		<h1>Excursii</h1>
+		<div id="patrat" style="display:block; width: 30px; height: 30px; background-color: red"></div>
+		<div id="container_input"></div>
+		<div>
+			<% for (var i = 0; i < excursii.length; i++) { %>
+				<%- include("../Template/template_excursie", {excursie: excursii[i]}); %>
+			<% } %>
+		</div>
+		
+		<div id="promotie_interval"></div>
+		
+	</main>
+	
+	<script src = "/resurse/JavaScript/filtrare.js"></script>
+</body>
+</html>
